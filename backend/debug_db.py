@@ -12,7 +12,7 @@ PERSIST_DIRECTORY = os.path.join(current_dir, "chroma_db")
 def check_db():
     print(f"🕵️ 正在检查数据库: {PERSIST_DIRECTORY}")
     
-    embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding = HuggingFaceEmbeddings(model_name="BAAI/bge-small-zh-v1.5")
     
     db = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embedding)
     

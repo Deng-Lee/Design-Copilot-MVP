@@ -11,7 +11,7 @@ PERSIST_DIRECTORY = os.path.join(current_dir, "chroma_db")
 def test_search():
     # 2. 必须使用和 ingest.py 中完全一样的 Embedding 模型
     print("正在加载 Embedding 模型...")
-    embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding = HuggingFaceEmbeddings(model_name="BAAI/bge-small-zh-v1.5")
 
     # 3. 加载已经存在的数据库
     # 注意：persist_directory 必须和你 ingest.py 里写的路径完全一致
